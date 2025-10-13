@@ -4,8 +4,173 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mastery | Bhavesh</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 5%;
+      background: rgba(20, 20, 20, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #b0b0b0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #fff;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 5%;
+    }
+
+    .page > h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+    }
+
+    .page > p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #c0c0c0;
+      max-width: 800px;
+    }
+
+    .page > ul {
+      margin-left: 2rem;
+      margin-bottom: 3rem;
+      color: #c0c0c0;
+    }
+
+    .page > ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .mastery-blocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .mastery-block {
+      background: rgba(30, 30, 30, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .mastery-block:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .mastery-block h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .mastery-block p {
+      color: #b0b0b0;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .mastery-block ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .mastery-block ul li {
+      padding: 0.5rem 0;
+      color: #a0a0a0;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .mastery-block ul li:before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(20, 20, 20, 0.95);
+      color: #808080;
+      margin-top: 4rem;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        gap: 1rem;
+      }
+
+      .page > h1 {
+        font-size: 2rem;
+      }
+
+      .mastery-blocks {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -17,10 +182,9 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
   <section class="page fade-in">
     <h1>Mastery</h1>
-    <p>I’m a professional game developer specializing in mobile games, Unity development, and interactive design. I enjoy creating new mechanics, experimenting with visuals, and telling stories through gameplay.</p>
+    <p>I'm a professional game developer specializing in mobile games, Unity development, and interactive design. I enjoy creating new mechanics, experimenting with visuals, and telling stories through gameplay.</p>
     <p>My expertise includes:</p>
     <ul>
       <li>Unity & C# programming</li>
@@ -28,8 +192,57 @@
       <li>2D/3D level design</li>
       <li>Firebase & multiplayer integration</li>
     </ul>
-  </section>
 
+    <div class="mastery-blocks">
+      <div class="mastery-block">
+        <h3>Animation</h3>
+        <p>Bringing characters and environments to life through fluid motion and expressive movement.</p>
+        <ul>
+          <li>Character rigging & skeletal animation</li>
+          <li>Unity Animator & Animation Controller</li>
+          <li>Procedural animation techniques</li>
+          <li>Timeline & cutscene creation</li>
+          <li>Particle systems & VFX</li>
+        </ul>
+      </div>
+
+      <div class="mastery-block">
+        <h3>Programming</h3>
+        <p>Building robust, scalable systems that power engaging gameplay experiences.</p>
+        <ul>
+          <li>C# architecture & design patterns</li>
+          <li>Performance optimization</li>
+          <li>AI & pathfinding algorithms</li>
+          <li>Backend integration & APIs</li>
+          <li>Multiplayer networking</li>
+        </ul>
+      </div>
+
+      <div class="mastery-block">
+        <h3>Game Design</h3>
+        <p>Crafting compelling gameplay loops and player experiences through thoughtful design.</p>
+        <ul>
+          <li>Game mechanics & balancing</li>
+          <li>Level design & pacing</li>
+          <li>Player psychology & engagement</li>
+          <li>UI/UX design principles</li>
+          <li>Narrative integration</li>
+        </ul>
+      </div>
+
+      <div class="mastery-block">
+        <h3>Technical Art</h3>
+        <p>Bridging the gap between art and code to create stunning visuals with optimal performance.</p>
+        <ul>
+          <li>Shader programming & effects</li>
+          <li>Material creation & optimization</li>
+          <li>Lighting & post-processing</li>
+          <li>Asset pipeline development</li>
+          <li>Mobile rendering techniques</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <footer>
     <p>© 2025 Bhavesh. All rights reserved.</p>
   </footer>
