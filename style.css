@@ -176,3 +176,28 @@ footer {
     gap: 0.5rem;
   }
 }
+/* ===============================
+   CONTACT EXTRA ENHANCEMENTS
+================================ */
+
+.contact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.contact-tags span {
+  padding: 0.35rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #ffcc00;
+  transition: transform 0.3s ease;
+}
+
+.contact-tags span:hover {
+  transform: scale(1.08);
+}
